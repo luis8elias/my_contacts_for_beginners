@@ -27,6 +27,13 @@ class _AddContactBottomSheetState extends State<AddContactBottomSheet> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    nameController.dispose();
+    phoneController.dispose();
+    super.dispose();
+  }
+
 
   String? validator({
       String? value,
